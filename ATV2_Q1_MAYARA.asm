@@ -1,6 +1,5 @@
 ; Atividade prática 2 - questão 1
-; Aluna: Mayara Rodrigues
-; N° matricula - 22221717
+; Aluna: Mayara Rodrigues - 22221717
 bits 64
 
 global  _start
