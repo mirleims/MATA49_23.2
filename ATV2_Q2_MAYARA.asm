@@ -1,3 +1,5 @@
+; Atividade prática 2 - questão 2
+; Aluna: Mayara Rodrigues - 222217117
 section .data
   prompt db "Inserir idade em anos, meses e dias: ", 0
   fmt db "%d",0
