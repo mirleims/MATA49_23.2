@@ -1,0 +1,50 @@
+; ATIVIDADE PRÁTICA 2 - QUESTÃO 2
+; NOME CAIO ADRIEL - 222215084
+
+section .data
+    anos dd 0
+    meses dd 0
+    dias dd 0
+    idade_em_dias dd 0
+
+    fmt db "%d", 0
+
+section .text
+    global main
+    extern printf
+    extern scanf
+
+main:
+    push rbp
+    mov rbp, rsp
+
+    mov rdi, fmt
+    lea rsi, [anos]
+    call scanf
+
+    mov rdi, fmt
+    lea rsi, [meses]
+    call scanf
+
+    mov rdi, fmt
+    lea rsi, [dias]
+    call scanf
+
+    mov rax, [anos]
+    imul rax, 365
+    
+    mov rbx, [meses]
+    imul rbx, 30
+
+    add rax, rbx
+    add rax, [dias]
+    mov [idade_em_dias], rax
+
+    mov rdi, [idade_em_dias]
+    call printf
+    
+    leave
+    ret
+
+
+
